@@ -65,11 +65,12 @@ namespace MouseMover
             // 计算新的鼠标位置
             int targetX = currentPos.X + deltaX;
             int targetY = currentPos.Y + deltaY;
-
+            
+            // 随机移动时间
             int moveTime = random.Next(1000, 30001);
 
             // 平滑移动鼠标
-            SmoothMoveMouse(currentPos.X, currentPos.Y, targetX, targetY, moveTime); // 1秒内完成移动
+            SmoothMoveMouse(currentPos.X, currentPos.Y, targetX, targetY, moveTime); // 在规定时间内完成移动
         }
 
         private void SmoothMoveMouse(int startX, int startY, int endX, int endY, int duration)
